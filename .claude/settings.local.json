@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Invoke-WebRequest -Uri \"http://127.0.0.1:5000/\" -UseBasicParsing)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 5000 -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-CimInstance Win32_Process -Filter \"ProcessId=22220\")",
+      "PowerShell(Stop-Process -Id 13188 -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Id 22220 -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Id 21396 -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(cd \"c:\\\\Users\\\\user\\\\Desktop\\\\files\\\\fragrances-site\\\\fragrances-site\"; $body = @{name='Проверка Telegram'; phone='+998900000001'; product='Aventus Creed'; comment='финальный тест уведомления'} | ConvertTo-Json; $r = Invoke-WebRequest -Uri \"http://127.0.0.1:5000/order\" -Method Post -ContentType \"application/json\" -Body $body -UseBasicParsing; Write-Output $r.Content)",
+      "PowerShell(Get-Process python -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 5000)",
+      "PowerShell(Get-Process -Id 22220,7612 -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-CimInstance Win32_Process -Filter \"ProcessId=7612\")"
+    ]
+  }
+}
